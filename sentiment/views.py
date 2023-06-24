@@ -1,11 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import SentimentAnalysis
-from .serializers import SentimentAnalysisSerializer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
-import torchvision
-
 
 class SentimentAnalysisView(APIView):
     def post(self, request, format=None):
